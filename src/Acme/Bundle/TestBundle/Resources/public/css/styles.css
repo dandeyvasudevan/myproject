@@ -1,0 +1,7 @@
+form#products_form label {
+    display: block;
+}
+
+.table-bordered tr td{
+    padding: 4px;
+}

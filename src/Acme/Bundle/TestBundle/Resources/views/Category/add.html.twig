@@ -1,0 +1,23 @@
+{% extends "AcmeTestBundle::layout.html.twig" %}
+
+{% block title %}AcmeTestBundle:Products:index{% endblock %}
+
+{% block body %}
+<h1>Welcome to the Products:index page</h1>
+{% endblock %}
+
+{% block content %}
+    <h2>Add New Category</h2>
+    
+    <form action="_add-category" method="POST" id="products_form">
+        {{ form_errors(form) }}
+
+        {{ form_row(form.category) }}
+        
+        <br />
+        
+         {{ form_rest(form) }} 
+        <input type="submit" value="Send" class="btn" />
+    </form>
+    
+{% endblock %}

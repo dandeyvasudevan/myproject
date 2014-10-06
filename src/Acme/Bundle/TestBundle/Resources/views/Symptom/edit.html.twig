@@ -1,0 +1,11 @@
+{% extends 'AcmeTestBundle::layout.html.twig' %}
+
+{% block content %}
+    <h1>Edit Symptom</h1>
+
+    {{ form(edit_form) }}
+
+    <a href="{{ path('symptom') }}" class="btn">Back to the list</a> <br />
+    {{ form(delete_form) }}
+
+{% endblock %}

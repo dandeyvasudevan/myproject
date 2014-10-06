@@ -1,0 +1,35 @@
+acme_test_cond:
+    resource: "@AcmeTestBundle/Resources/config/routing/cond.yml"
+    prefix:   /cond
+
+acme_test_symptom:
+    resource: "@AcmeTestBundle/Resources/config/routing/symptom.yml"
+    prefix:   /symptom
+
+acme_test_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: AcmeTestBundle:Default:index }
+
+#index:
+ #   path:     /
+  #  defaults: { _controller: AcmeTestBundle:Products:index }
+
+index1:
+    path:     _list-categories
+    defaults: { _controller: AcmeTestBundle:Category:index1 }
+    
+addCategory:
+    path:   _add-category
+    defaults: { _controller: AcmeTestBundle:Category:addCategory }
+    
+addProduct:
+    path:   _add-product
+    defaults: { _controller: AcmeTestBundle:Products:addProduct }
+    
+condSymptoms:
+    path:   /
+    defaults: { _controller: AcmeTestBundle:Symptom:cond }
+
+index:
+    path:     /admin
+    defaults: { _controller: AcmeTestBundle:Admin:index }

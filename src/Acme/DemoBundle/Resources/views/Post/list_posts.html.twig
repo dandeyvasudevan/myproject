@@ -1,0 +1,15 @@
+{% extends "AcmeDemoBundle::layout.html.twig" %}
+
+{% block title %}AcmeDemoBundle:Post:getList{% endblock %}
+
+{% block body %}
+<h1>List Products</h1>
+
+<ul>
+    {%for product in products %}
+    <li>{{product.name}}
+    {% endfor %}
+    
+</ul>
+
+{% endblock %}

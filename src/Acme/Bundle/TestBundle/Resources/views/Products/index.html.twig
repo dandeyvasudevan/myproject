@@ -1,0 +1,32 @@
+{% extends "AcmeTestBundle::layout.html.twig" %}
+
+{% block title %}AcmeTestBundle:Products:index{% endblock %}
+
+{% block body %}
+<h1>Welcome to the Products:index page</h1>
+{% endblock %}
+
+{% block content %}
+    <h2> List Products</h2>
+    
+    {% if productsCnt>0 %}
+        
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Ctg Name</th>
+                    <th>Prd Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                {%for condition in conditions %}
+                    <tr>
+                       <td>{{product.category.ctgName}}</td>
+                       <td>{{product.name}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    
+    {% endif %}
+{% endblock %}

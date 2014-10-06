@@ -1,0 +1,30 @@
+cond:
+    path:     /
+    defaults: { _controller: "AcmeTestBundle:Cond:index" }
+
+cond_show:
+    path:     /{id}/show
+    defaults: { _controller: "AcmeTestBundle:Cond:show" }
+
+cond_new:
+    path:     /new
+    defaults: { _controller: "AcmeTestBundle:Cond:new" }
+
+cond_create:
+    path:     /create
+    defaults: { _controller: "AcmeTestBundle:Cond:create" }
+    requirements: { _method: post }
+
+cond_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AcmeTestBundle:Cond:edit" }
+
+cond_update:
+    path:     /{id}/update
+    defaults: { _controller: "AcmeTestBundle:Cond:update" }
+    requirements: { _method: post|put }
+
+cond_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AcmeTestBundle:Cond:delete" }
+    requirements: { _method: post|delete }

@@ -1,0 +1,30 @@
+{% extends "AcmeTestBundle::layout.html.twig" %}
+
+{% block title %}AcmeTestBundle:Category:index{% endblock %}
+
+{% block body %}
+<h1>Welcome to the Category:index page</h1>
+{% endblock %}
+
+{% block content %}
+    <h2> List Categories</h2>
+    
+    {% if categoriesCnt>0 %}
+        
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Ctg Name</th>
+                </tr>
+            </thead>
+            <tbody>
+                {%for category in categories %}
+                    <tr>
+                       <td>{{category.ctgName}}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    
+    {% endif %}
+{% endblock %}

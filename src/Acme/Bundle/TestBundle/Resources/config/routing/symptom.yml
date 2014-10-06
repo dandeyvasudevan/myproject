@@ -1,0 +1,34 @@
+symptom:
+    path:     /
+    defaults: { _controller: "AcmeTestBundle:Symptom:index" }
+
+symptom_show:
+    path:     /{id}/show
+    defaults: { _controller: "AcmeTestBundle:Symptom:show" }
+
+symptom_new:
+    path:     /new
+    defaults: { _controller: "AcmeTestBundle:Symptom:new" }
+
+symptom_create:
+    path:     /create
+    defaults: { _controller: "AcmeTestBundle:Symptom:create" }
+    requirements: { _method: post }
+
+symptom_edit:
+    path:     /{id}/edit
+    defaults: { _controller: "AcmeTestBundle:Symptom:edit" }
+
+symptom_update:
+    path:     /{id}/update
+    defaults: { _controller: "AcmeTestBundle:Symptom:update" }
+    requirements: { _method: post|put }
+
+symptom_delete:
+    path:     /{id}/delete
+    defaults: { _controller: "AcmeTestBundle:Symptom:delete" }
+    requirements: { _method: post|delete }
+    
+    
+    
+  

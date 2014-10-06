@@ -1,0 +1,30 @@
+{% extends "AcmeTestBundle::home.html.twig" %}
+
+{% block title %}AcmeTestBundle:Products:index{% endblock %}
+
+{% block body %}
+<h1>Welcome to the Products:index page</h1>
+{% endblock %}
+
+{% block content %}
+    <h2> List Conditions & Symptoms</h2>
+    
+    {% if conditionsCnt>0 %}
+        <ul>
+        {%for condition in conditions %}
+                    
+                      <li>{{condition.name}}</li>
+                      
+                           {% if condition.symptoms.count > 0 %}
+                            <li style="list-style-type:none;"><ul>
+                                {%for symptom in condition.symptoms %}
+                                    <li>{{symptom.name}}</li>
+                                {% endfor %}
+                            </ul></li>
+                           {% endif %}
+                           
+                       
+                {% endfor %}
+        </ul>    
+    {% endif %}
+{% endblock %}

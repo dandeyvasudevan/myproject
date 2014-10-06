@@ -1,0 +1,14 @@
+{% extends 'AcmeTestBundle::layout.html.twig' %}
+
+{% block content %}
+    <h1>Cond edit</h1>
+
+    
+    {{ form(edit_form) }}
+
+    <br />
+    
+    <a href="{{ path('cond') }}" class="btn">Back to the list</a>
+    {{ form(delete_form) }}
+
+{% endblock %}
