@@ -1,0 +1,14 @@
+The following commands need to be executed to get this project running on server:
+
+1)php app\console doctrine:database:create.
+2)php app\console doctrine:schema:update --force
+3)php app\console doctrine:fixtures:load
+	- Created fixtures for the following:
+		-	To load user data (fos-user)
+		-	To load conditions and symptoms test data.
+
+Front-End/Home Page URL: http://127.0.0.1:8000/
+Admin URL: http://127.0.0.1:8000/admin
+Admin User Credentials:
+UserName: admin
+Password: adm1n
